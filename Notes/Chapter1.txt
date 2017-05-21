@@ -1,0 +1,4 @@
+The Whats, Whos, and Whys of Quantitative Trading
+
+Algorithmic trading, is the trading of securities based strictly on the buy/sell decisions of 
+computer algorithms.

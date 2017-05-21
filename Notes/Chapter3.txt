@@ -1,0 +1,41 @@
+BACKTESTING- evaluating how the strategy would have performed in the past
+
+Common backtesting platforms
+1. Excel- avoids look ahead bias, can only be used for simple strategies though
+2. MATLAB- sophisticated math built in, can be used to pull financial data from the internet; example on pg.34
+3. Tradestation- provides all in one backtesting and trade execution platforms; Once you have backtested the program, you can immediately generate orders using the same program and transmit them to the brokerage.
+disadvantages of tradestation- proprietary language; once tested there, can't use any other platform to trade
+
+WHAT IS SPLITING OF STOCKS?
+split ==> N to 1; if N<1 ==> reverse split
+
+--> High and low data are far noisier than open and close data; Sometimes, the high or low is simply
+due to an incorrectly reported tick that was not filtered out.
+
+Typically, an extreme return should be accompanied by a news announcement, or should occur on a day when the market index also experienced extreme returns. If not, then your data is suspect
+
+--> author argues that sharpe ratio and drawdowns are two most important parameters
+pg. 44:
+you need to subtract the risk-free rate from your strategy returns in calculating the Sharpe ratio only if your strategy incurs financing cost.
+
+COMMON PITFALLS DURING BACKTESTING
+
+1. Look ahead bias- strategy uses data that is available after the order has been made; eg. “Buy when the
+stock is within 1 percent of the day’s low”, using results of regression coefficients of a model of the past
+
+Avoid the bias ==> as many variableas as possible should be LAGGED
+WHAT IS MOVIng AVERAGE?!
+pg. 52 ==> Read this section properly
+
+2. Data Snooping Bias- Backtest performance is inflated as compareed to actual performance. 
+
+==> Break the sample down in two parts, use one to model, other for out of sample testing
+
+==> No. of data  points = 252 * no. of free parameters used to build the model
+
+
+
+
+
+
+

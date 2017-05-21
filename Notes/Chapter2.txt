@@ -1,0 +1,85 @@
+Fishing for Ideas
+
+--> resources given on page 10 of the book
+
+Factors to consider when choosing which idea to move on with:
+1. Working hours- does this idea needs intervention many times a day?
+2. Programming skills- if you know programming, you can explore high frequency trading
+3. Trading capital- if you shall open a proprietary of a brokerage trading account, how much leverage to take
+
+There is a misconception aired by some investment advisers, though, that if your goal is to achieve maximum long-term capital growth, then the best strategy is a buy-and-hold one. This notion has been shown to be mathematically false. In reality, maximum long-term growth is achieved by finding a strategy with the maximum
+Sharpe ratio, provided that you have access to sufficiently high leverage. Therefore, comparing a
+short-term strategy with a very short holding period, small annual return, but very high Sharpe ratio, to a long-term strategy with a long holding period, high annual return, but lower Sharpe ratio, it is
+still preferable to choose the short-term strategy even if your goal is long-term growth, barring tax considerations and the limitation on your margin borrowing (more on this surprising fact later in Chapter
+6 on money and risk management).
+
+Checks before implementing the Strategy
+
+1. How Does It Compare with a Benchmark and How Consistent Are Its Returns?
+
+If a long only strategy generates an interest of 10% p.a., it's better to invest in in an index fund, for it will be safer. 
+Information ratio or sharpe ratio is the measure to use when you want to assess a long only strategy.
+
+Information Ratio = Average of excess returns  / Std. Deviation of excess returns
+
+Excess returns = Portfolio returns - Benchmark returns
+
+Benchmark is usually the market index to which the securities you are trading belong
+
+If you are trading small-cap stocks, the market index should be the Standard & Poor’s small-cap index or the Russell 2000 index, rather than the S&P 500. If you are trading just gold futures, then the market index should be gold spot price, rather than a stock index.
+
+The Sharpe ratio is actually a special case of the information ratio, suitable when we have a dollar-neutral strategy, so that the benchmark to use is always the risk-free rate. In practice, most traders use the Sharpe ratio even when they are trading a directional (long or short only) strategy, simply because it facilitates comparison across different strategies. Everyone agrees on what the risk-free rate is, but each trader can use a different market index to come up with their own favorite information ratio, rendering comparison difficult.
+
+Dollar neutral strategy- Equity long-short strategies which hold equal dollar amounts of long and short positions, are called market neutral strategies or long-short dollar neutral strategy.
+
+“Well, a high Sharpe ratio is certainly nice, but if you can get a higher return in-
+stead, we can all go buy bigger houses with our bonuses!” This reasoning is quite wrong. A higher Sharpe ratio will actually allow you to make more profits in the end, since it allows you to trade at a higher leverage. It is the leveraged return that matters in the end, not the nominal return of a trading strategy.
+
+Educated guess for Sharpe Ratio:
+1. If a strategy trades only a few times a year, chances are its Sharpe ratio won’t be high. This does not prevent it from being part of your multistrategy trading business, but it does disqualify the strategy from being your main profit center.
+2. Bumps in the equity v/s time curve ==> lower sharpe ratio
+
+Rule of thumb ==> Any strategy that has a sharp ration < 1 is not suitable as a stand alone strategy.
+
+A strategy suffers a drawdown whenever it has lost money recently.
+A drawdown at a given time t is defined as the difference between the current equity value (assuming no redemption or cash infusion) of the portfolio and the global maximum of the equity curve occurring on or before time t. The maximum drawdown is the difference between the global maximum of the equity curve with the global minimum of the curve after the occurrence of the global maximum (time order matters here: The global minimum must occur later than the global maximum). The global maximum is called the “high watermark”. The maximum drawdown duration is the longest it has taken for the equity curve to recover losses.
+--> drawdowns are measured in equity terms
+--> The maximum drawdown and the maximum drawdown duration do not typically overlap over the same period.
+--> estimate the max drawdown you can tolerate while trading
+
+Transaction costs 
+
+--> Two types: Comission fees charged by the broker (cost an investor pays when buying and selling trades or to keep an account), liquidity costs (may be saved by limit order, but then the opportunity cost since order might not be executed!)
+--> Also, when you buy or sell a large chunk of securities, you will not be able to complete
+the transaction without impacting the prices at which this transaction is done.
+This effect on the market prices due to your own order is called market impact, and it can contribute to a
+large part of the total transaction cost when the security is not very liquid.
+
+--> depend on frequency of transactions
+
+SLIPPAGE- Differnce between the prices that trigger the order and the price at which it gets executed; caused due to delay because of the software.
+
+Transaction cost can be estimated by taking half the average bid-ask spread of a security and then adding the commission if your order size is not much bigger than the average sizes of the best bid and offer.
+
+Data suffers from SURVIVORSHIP BIAS
+--> data of companies that faced bankruptcy, mergers, delisting or acquisition is absent from databases
+==> Important to use data that DOESN'T have survivorship bias.
+
+--> Strategies performed better a decade ago since there weren't many Hedgefunds doing quantitive trading.
+--- long strategy would perform good if backtested on a long period of time since most of the firms that sirvived did well!
+==> Pay more attention to insights from recent data.
+
+Data Snooping Bias
+-- Too many parameters
+
+AI Algorithms for the author seemed to work only when- 
+
+--They are based on a sound econometric or rational basis, and not on random discovery of patterns.
+--They have few parameters that need to be fitted to past data.
+--They involve linear regression only, and not fitting to some esoteric non-linear functions.
+--They are conceptually simple.
+--All optimizations must occur in a lookback moving window, involving no future unseen data. And the effect of this optimization must be continuously demonstrated using this future, unseen data.
+
+---Capacity is the technical term for how much a strategy can absorb without negatively impacting its returns
+
+--> An individual trader should look for strategies that trade too often, very few stocks everyday, infrequent positons (like seasonal trades)==> low capacity==> big firms won't use them, so these strategies might be useful for individual traders.
