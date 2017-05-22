@@ -1,0 +1,21 @@
+SETTING UP YOUR BUSINESS
+
+1. Business Structure- Retail or Proprietary
+
+RETAIL
+
+- completely independent
+- leverage (use of debt to finance assets) limited by SEC (Securities and Exchange Commission) Regulation T to
+roughly two times your equity if you hold overnight positions (trading positions not closed by the end of trading day, i.e., kept overnight)
+
+PROPRIETARY
+
+- join a proprietary trading firm; own money but a much higher leverage
+- have to pass standardized tests to join these firms
+- Depending on how much capital you invested, you may get to keep all your profits, or some percentage of them. In terms of liability, however, your loss is limited to your initial investment.
+(Actually, liability is also limited if you form an S corporation or limited liability company [LLC] and open an account through this entity at a retail brokerage.)
+
+--> The decision whether to go retail or to join a proprietary trading firm is generally based on your need of capital, the style of your strategy, and your skill level.
+
+EXHAUSTIVE COMPARISON ON PAGE # 72.
+

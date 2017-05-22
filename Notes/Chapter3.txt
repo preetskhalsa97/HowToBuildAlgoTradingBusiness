@@ -27,15 +27,19 @@ Avoid the bias ==> as many variableas as possible should be LAGGED
 WHAT IS MOVIng AVERAGE?!
 pg. 52 ==> Read this section properly
 
-2. Data Snooping Bias- Backtest performance is inflated as compareed to actual performance. 
+2. Data Snooping Bias- Backtest performance is inflated as compared to actual performance. 
 
 ==> Break the sample down in two parts, use one to model, other for out of sample testing
 
 ==> No. of data  points = 252 * no. of free parameters used to build the model
 
+--> 1 base point = 0.01%
 
+STRATEGY REFINEMENT
+If the backtest performance is unsatisfactory, do parameter optimization. 
+Whatever changes you do to optimize performance on the training set, should enhance performance on the test set
+as well. 
 
-
-
-
-
+PAIR TRADING OF STOCKS
+- market neutral strategy: A market-neutral strategy is a type of investment strategy undertaken by an investor or an investment manager that seeks to profit from both increasing and decreasing prices in one or more markets, while attempting to completely avoid some specific form of market risk.
+- good explanation on http://www.investopedia.com/articles/trading/04/090804.asp
