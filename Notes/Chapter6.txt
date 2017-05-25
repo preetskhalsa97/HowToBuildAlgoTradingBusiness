@@ -1,0 +1,54 @@
+RISK MANAGEMENT 
+
+approximation- distribution of returns from a strategy is gaussian
+
+Let’s denote the optimal fractions of your equity that you should allocate to each of your n strategies by a column vector F ∗ = ( f 1 ∗ , f 2 ∗ , . . . , f n ∗ ) T . Here, T means transpose.
+
+F ∗ = C^(-1)*M
+
+C is the covariance matrix such that matrix element C ij is the covariance of the returns of the i th and j th strategies
+M = (m 1 , m 2 , . . . , m n ) T is the column vector of mean returns of the strategies
+
+these returns are one-period, simple (uncompounded), unlevered returns
+
+For example, if the strategy is long $1 of stock A and short $1 of stock B and
+made $0.10 profit in a period, m is 0.05, no matter what the equity in the account is.
+
+If we assume that the strategies are all statistically independent, the covariance matrix becomes a diagonal matrix, with the diagonal elements equal to the variance of the individual strategies. This leads
+to an especially simple formula:
+f i = m i /(s i** 2) ==> s==> std. deviaition
+Beyond position risk (which is comprised of both market risk
+and specific risk), there are other forms of risks to consider: model
+risk, software risk, and natural disaster risk, in decreasing order of
+likelihood.
+Risk management always dictates that you should reduce your position size whenever there is a loss, even when it means realizing those losses.
+
+--> interesting case study on page 104. 
+
+Given the necessity of realizing losses as well as the scale and frequency of trading required to constantly rebalance the portfolio in order to closely follow the Kelly formula, it is understandable that most traders prefer to trade at half-Kelly leverage. A lower leverage implies a smaller size of the selling required for risk management.
+
+WHAT IS KELLY LEVERAGE?
+
+Kelly criterion -> http://www.investopedia.com/articles/trading/04/091504.asp
+
+==> some traders might trade at half the leverage given by kelly formula, since kelly formula spreads investments in a gaussian distribution, but the returns are not gaussian. 
+
+The leverage to use is always the smaller of the half-Kelly leverage and the maximum leverage obtained using the worst historical loss.
+
+Beyond position risk (which is comprised of both market risk and specific risk), there are other forms of risks to consider: model risk, software risk, and natural disaster risk, in decreasing order of
+likelihood.
+
+Model Risk- possibility that trading losses are not due to the statistical vagaries of the market, but to the fact that the trading model is wrong.
+
+There is not much you can do to alleviate these sources of model risk, except to gradually lower the leverage of the model as it racks up losses, up to the point where the leverage is zero. This can be ac-
+complished in a systematic way if you constantly update the leverage according to the Kelly formula based on the trailing mean return and standard deviation
+
+If you feel that your system really is deficient and want to tweak it, you should always backtest the modified version to make sure that it does outperform the old system over a sufficiently long backtest period, not just over the last few weeks.
+
+The one golden rule in risk management is to keep the size of your portfolio under control at all times
+
+Survivorship bias also affects the backtesting of mean-reverting strategies disproportionately, as I discussed in Chapter 3. Stocks that went through extreme price actions are likely to be either acquired (the prices went very high) or went bankrupt (the prices went to zeros). A mean-reverting strategy will short the former and
+buy the latter, losing money in both cases. However, these stocks may not appear at all in your historical database if it has survivorship bias, thus artificially inflating your backtest performance. You can look up Table 3.1 to find out which database has survivorship bias.
+
+
+

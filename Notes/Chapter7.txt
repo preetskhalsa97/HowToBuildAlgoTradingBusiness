@@ -1,0 +1,15 @@
+STATIONARITY AND COINTEGRATION
+A time series is “stationary” if it never drifts farther and farther away
+from its initial value. In technical terms, stationary time series are
+“integrated of order zero,” or I(0). (See Alexander, 2001.) It is obvi-
+ous that if the price series of a security is stationary, it would be a
+great candidate for a mean-reversion strategy. Unfortunately, most
+stock price series are not stationary—they exhibit a geometric ran-
+dom walk that gets them farther and farther away from their start-
+ing (i.e., initial public offering) values.
+
+==> A stationary series is a great candidate for mean reverting strategy.
+
+Stationary series: Having same characteristics like mean, sd, autocorrelation throughout.
+
+Optimal hedge ratio: nuber of shares of one security/ number of shares of the other security
